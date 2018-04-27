@@ -11,6 +11,7 @@ import { TodoHeaderComponent } from './component/todo-header/todo-header.compone
 import { TodoItemComponent } from './component/todo-item/todo-item.component';
 import { TodoListComponent } from './component/todo-list/todo-list.component';
 import { TodosComponent } from './component/todos/todos.component';
+import { TodoService } from './service/todo.service';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { TodosComponent } from './component/todos/todos.component';
     RouterModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
