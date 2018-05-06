@@ -1,3 +1,8 @@
-<p>
-  todo-list works!
-</p>
+<section class='main' *ngIf='visibleTodos.length'>
+  <input type="checkbox" class='toggle-all' #toggleall [checked]='isAllCompleted' (click)='toggleAll(toggleall.checked)'>
+  <ul class="todo-list">
+    <app-todo-item *ngFor='let todo of visibleTodos' [todo]='todo'>
+      </app-todo-item>
+
+  </ul>
+</section>
